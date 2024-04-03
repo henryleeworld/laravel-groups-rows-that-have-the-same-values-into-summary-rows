@@ -23,7 +23,7 @@
                         @foreach ($orders as $order)
                             <tr class="odd:bg-white even:bg-slate-50">
                                 <td class="border px-4 py-2">{{ $order->month }}</td>
-                                <td class="border px-4 py-2">{{ $order->products_name }}</td>
+                                <td class="border px-4 py-2">{{ $order->product_name }}</td>
                                 <td class="border px-4 py-2">${{ number_format($order->order_total, 2) }}</td>
                                 <!--<td class="border px-4 py-2">{{ $order->products->sum('pivot_quantity') }}</td>-->
                                 <td class="border px-4 py-2">{{ $order->total_orders }}</td>

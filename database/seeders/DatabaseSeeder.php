@@ -13,10 +13,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         if (app()->environment('local')) {
-            $this->call(OrderSeeder::class);
-            $this->call(ProductSeeder::class);
-            $this->call(QuestionSeeder::class);
-            $this->call(EmployeeSeeder::class);
+            $this->call([
+                OrderSeeder::class,
+                ProductSeeder::class,
+                QuestionSeeder::class,
+                EmployeeSeeder::class,
+            ]);
         }
     }
 }

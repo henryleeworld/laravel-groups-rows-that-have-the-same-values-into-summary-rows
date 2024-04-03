@@ -13,7 +13,7 @@ class GroupByAggregateWithCalculationsController extends Controller
             ->select(['name', 'stock_quantity'])
             ->join('order_product', 'products.id', '=', 'order_product.product_id')
             ->addSelect(DB::raw('SUM(order_product.quantity) + products.stock_quantity as total_quantity'))
-            ->groupBy('products.id')
+            ->groupBy('products.id', 'name', 'stock_quantity')
             ->get();
 
         return view('examples.groupByAggregateWithCalculations', [

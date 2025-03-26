@@ -7,6 +7,9 @@ use DB;
 
 class EmployeeTimesheetController extends Controller
 {
+    /**
+     * Employee timesheet.
+     */
     public function __invoke()
     {
         $timesheet = EmployeeTimesheet::query()

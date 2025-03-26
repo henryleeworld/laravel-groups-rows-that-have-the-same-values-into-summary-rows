@@ -8,6 +8,9 @@ use Illuminate\Database\Seeder;
 
 class EmployeeSeeder extends Seeder
 {
+    /**
+     * Run the database seeders.
+     */
     public function run(): void
     {
         Employee::factory()

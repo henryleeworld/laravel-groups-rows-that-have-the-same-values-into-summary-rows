@@ -8,6 +8,9 @@ use Carbon\CarbonPeriod;
 
 class OrderReportsController extends Controller
 {
+    /**
+     * Order reports.
+     */
     public function __invoke()
     {
         $orders = collect([]);

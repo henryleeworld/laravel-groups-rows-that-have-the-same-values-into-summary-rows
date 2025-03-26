@@ -6,6 +6,9 @@ use App\Models\Order;
 
 class GroupByRelatedColumnControllerWithEloquent extends Controller
 {
+    /**
+     * Group by related column with eloquent.
+     */
     public function __invoke()
     {
         $orders = Order::selectRaw(

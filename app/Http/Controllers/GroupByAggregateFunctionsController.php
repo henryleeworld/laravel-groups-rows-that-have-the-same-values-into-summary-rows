@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class GroupByAggregateFunctionsController extends Controller
 {
+    /**
+     * Group by aggregate functions.
+     */
     public function __invoke(Request $request)
     {
         $orders = Order::query();

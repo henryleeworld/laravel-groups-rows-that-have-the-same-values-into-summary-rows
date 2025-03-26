@@ -8,13 +8,21 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
+ */
 class OrderFactory extends Factory
 {
     protected $model = Order::class;
 
-    public function definition()
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
     {
-        $pre_tax = $this->faker->randomFloat(2, 5, 10_000);
+        $pre_tax = fake()->randomFloat(2, 5, 10_000);
         $tax = $pre_tax * 0.21;
         $orderTime = fake()->dateTimeBetween(now()->subMonths(6), now());
         return [

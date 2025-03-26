@@ -6,6 +6,9 @@ use App\Models\Order;
 
 class GroupByMultipleColumnsErrorEloquent extends Controller
 {
+    /**
+     * Group by multiple columns error eloquent.
+     */
     public function __invoke()
     {
         $orders = Order::selectRaw(

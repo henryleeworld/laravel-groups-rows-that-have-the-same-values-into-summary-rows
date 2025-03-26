@@ -6,6 +6,9 @@ use App\Models\Order;
 
 class GroupByRawMonthWithEloquent extends Controller
 {
+    /**
+     * Group by raw month with eloquent.
+     */
     public function __invoke()
     {
         $orders = Order::selectRaw(

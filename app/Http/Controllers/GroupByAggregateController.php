@@ -7,6 +7,9 @@ use DB;
 
 class GroupByAggregateController extends Controller
 {
+    /**
+     * Group by aggregate.
+     */
     public function __invoke()
     {
         $orders = Order::query()

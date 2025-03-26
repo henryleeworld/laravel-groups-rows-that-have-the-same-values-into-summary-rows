@@ -6,6 +6,9 @@ use App\Models\Order;
 
 class OrderController extends Controller
 {
+    /**
+     * Order.
+     */
     public function __invoke()
     {
         $orders = Order::query()

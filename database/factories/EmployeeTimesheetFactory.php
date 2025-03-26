@@ -6,10 +6,18 @@ use App\Models\Employee;
 use App\Models\EmployeeTimesheet;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\EmployeeTimesheet>
+ */
 class EmployeeTimesheetFactory extends Factory
 {
     protected $model = EmployeeTimesheet::class;
 
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
     public function definition(): array
     {
         $startTime = fake()->dateTimeBetween('-2 weeks');

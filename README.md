@@ -1,4 +1,4 @@
-# Laravel 11 分類相同值的資料列為若干個摘要群組
+# Laravel 12 分類相同值的資料列為若干個摘要群組
 
 將查詢結果中特定欄位值相同的資料分為若干個群組，而每一個群組都會傳回一個資料列。
 
@@ -35,8 +35,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/mMA1H7y.png)
+![](https://i.imgur.com/bsEvX3Q.png)
 > 把資料分類比較
 
-![](https://i.imgur.com/gntsiqy.png)
+![](https://i.imgur.com/EI33fLb.png)
 > 符合相同使用者名稱才會被分為一組

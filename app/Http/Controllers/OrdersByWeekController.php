@@ -7,6 +7,9 @@ use Carbon\Carbon;
 
 class OrdersByWeekController extends Controller
 {
+    /**
+     * Orders by week.
+     */
     public function __invoke()
     {
         $orders = Order::query()

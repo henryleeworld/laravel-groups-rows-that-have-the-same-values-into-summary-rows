@@ -9,8 +9,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Product extends Model
 {
+    /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
     protected $fillable = [
         'name',
         'price',
@@ -25,6 +31,9 @@ class Product extends Model
         );
     }
 
+    /**
+     * The orders that belong to the product.
+     */
     public function orders(): BelongsToMany
     {
         return $this->belongsToMany(Order::class)->withPivot('quantity');

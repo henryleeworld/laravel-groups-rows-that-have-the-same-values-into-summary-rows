@@ -7,6 +7,9 @@ use DB;
 
 class GroupByAggregateWithCalculationsController extends Controller
 {
+    /**
+     * Group by aggregate with calculations.
+     */
     public function __invoke()
     {
         $products = Product::query()

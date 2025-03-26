@@ -6,6 +6,9 @@ use App\Models\Question;
 
 class QuestionsController extends Controller
 {
+    /**
+     * Questions.
+     */
     public function __invoke()
     {
         $questions = Question::query()

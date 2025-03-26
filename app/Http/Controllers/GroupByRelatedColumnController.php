@@ -6,6 +6,9 @@ use DB;
 
 class GroupByRelatedColumnController extends Controller
 {
+    /**
+     * Group by related column.
+     */
     public function __invoke()
     {
         $orders = DB::table('orders')

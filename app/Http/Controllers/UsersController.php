@@ -6,6 +6,9 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
+    /**
+     * Users.
+     */
     public function __invoke()
     {
         $ageList = User::query()

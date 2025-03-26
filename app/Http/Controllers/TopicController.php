@@ -6,6 +6,9 @@ use App\Models\Topic;
 
 class TopicController extends Controller
 {
+    /**
+     * Topic.
+     */
     public function __invoke()
     {
         $topics = Topic::query()

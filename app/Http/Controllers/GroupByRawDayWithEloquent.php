@@ -6,6 +6,9 @@ use App\Models\Order;
 
 class GroupByRawDayWithEloquent extends Controller
 {
+    /**
+     * Group by raw day with eloquent.
+     */
     public function __invoke()
     {
         $orders = Order::selectRaw(

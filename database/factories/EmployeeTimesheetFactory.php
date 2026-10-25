@@ -4,15 +4,15 @@ namespace Database\Factories;
 
 use App\Models\Employee;
 use App\Models\EmployeeTimesheet;
+use Illuminate\Database\Eloquent\Factories\Attributes\UseModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\EmployeeTimesheet>
+ * @extends Factory<EmployeeTimesheet>
  */
+#[UseModel(EmployeeTimesheet::class)]
 class EmployeeTimesheetFactory extends Factory
 {
-    protected $model = EmployeeTimesheet::class;
-
     /**
      * Define the model's default state.
      *

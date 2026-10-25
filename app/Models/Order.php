@@ -2,31 +2,19 @@
 
 namespace App\Models;
 
+use Database\Factories\OrderFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+#[Fillable(['user_id', 'status', 'order_time', 'delivery_time', 'pre_tax', 'tax', 'total'])]
 class Order extends Model
 {
-    /** @use HasFactory<\Database\Factories\OrderFactory> */
+    /** @use HasFactory<OrderFactory> */
     use HasFactory;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'user_id',
-        'status',
-        'order_time',
-        'delivery_time',
-        'pre_tax',
-        'tax',
-        'total',
-    ];
 
     protected function preTax(): Attribute
     {

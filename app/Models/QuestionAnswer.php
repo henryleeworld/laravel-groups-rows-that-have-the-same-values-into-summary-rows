@@ -2,20 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+#[Fillable(['question_id', 'answer', 'is_correct'])]
 class QuestionAnswer extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'question_id', 'answer', 'is_correct',
-    ];
-
     /**
      * Get the attributes that should be cast.
      *

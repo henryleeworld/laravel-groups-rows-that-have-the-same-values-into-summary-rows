@@ -2,23 +2,17 @@
 
 namespace App\Models;
 
+use Database\Factories\EmployeeFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+#[Fillable(['name'])]
 class Employee extends Model
 {
-    /** @use HasFactory<\Database\Factories\EmployeeFactory> */
+    /** @use HasFactory<EmployeeFactory> */
     use HasFactory;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name'
-    ];
 
     /**
      * Get the employee timesheets for the employee.

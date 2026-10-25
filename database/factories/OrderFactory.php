@@ -5,16 +5,16 @@ namespace Database\Factories;
 use App\Enum\OrderStatus;
 use App\Models\Order;
 use App\Models\User;
-use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\Attributes\UseModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Carbon;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
+ * @extends Factory<Order>
  */
+#[UseModel(Order::class)]
 class OrderFactory extends Factory
 {
-    protected $model = Order::class;
-
     /**
      * Define the model's default state.
      *
